@@ -49,7 +49,6 @@ let mapleader = ","
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 let g:fuzzy_ignore = "*.log,doc/app/**/*,*.png,*.gif,*.jpg,*.jpeg"
-let g:fuzzy_matching_limit = 30
 
 map! <F1> <Esc>
 map <F2> :NERDTreeToggle<CR>
