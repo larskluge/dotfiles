@@ -7,7 +7,7 @@ function! JSLintQuick()
 				set grepformat&vim
 				set grepformat&vim
 				let &grepformat = '%f(%l):%m'
-				let &grepprg = "jsl -nologo -nofilelisting -nosummary -nocontext -conf /etc/jsl.conf -process"
+				let &grepprg = "jsl -nologo -nofilelisting -nosummary -nocontext -process"
 
 				if &readonly == 0 | update | endif
 				silent! grep! %
