@@ -23,6 +23,7 @@ set incsearch
 
 " colors
 syntax on
+au BufNewFile,BufRead *.j setf objj
 colorscheme blackboard
 highlight Pmenu ctermbg=5 guibg=#004e9c
 
