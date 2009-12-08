@@ -77,3 +77,8 @@ function TrimWhiteSpace()
 
 autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :call TrimWhiteSpace()
 
+
+" Tweak EasyGrep
+let g:EasyGrepMode = 2
+let g:EasyGrepRecursive = 1
+
