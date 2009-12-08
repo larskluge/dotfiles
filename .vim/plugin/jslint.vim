@@ -1,4 +1,4 @@
-function! JSLintQuick()
+function! JSLintQuick(hide_empty)
 				set lazyredraw
 				" Close any existing cwindows.
 				cclose
@@ -15,24 +15,24 @@ function! JSLintQuick()
 				let &grepprg = l:grepprogram_save
 				let l:mod_total = 0
 				let l:win_count = 1
-				" Determine correct window height
-				windo let l:win_count = l:win_count + 1
-				if l:win_count <= 2 | let l:win_count = 4 | endif
-				windo let l:mod_total = l:mod_total + winheight(0)/l:win_count |
-				\ execute 'resize +'.l:mod_total
-				" Open cwindow
-				execute 'belowright copen '.l:mod_total
-				nnoremap <buffer> <silent> c :cclose<CR>
-				set nolazyredraw
-				redraw!
+
+
+        if (len(getqflist()) > 0 || !a:hide_empty)
+          " Determine correct window height
+          execute 'belowright copen'
+          nnoremap <buffer> <silent> c :cclose<CR>
+          set nolazyredraw
+          redraw!
+        end
 
 endfunction
 
-command! -nargs=0 -complete=command JSLintQuick call JSLintQuick()
+command! -nargs=0 -complete=command JSLintQuick call JSLintQuick(0)
 
-if ( !hasmapto('JSLintQuick()') && (maparg('<F3>') == '') )
-  map <F3> :call JSLintQuick()<CR>
-  map! <F3> :call JSLintQuick()<CR>
+if ( !hasmapto('JSLintQuick(0)') && (maparg('<F3>') == '') )
+  map <F3> :call JSLintQuick(0)<CR>
+  map! <F3> :call JSLintQuick(0)<CR>
+  autocmd BufWritePost,FileWritePost *.js call JSLintQuick(1)
 else
   if ( !has("gui_running") || has("win32") )
     echo "JSLint Error: No Key mapped.\n".
