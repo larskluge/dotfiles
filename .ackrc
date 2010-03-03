@@ -1,3 +1,5 @@
 --type-add=ruby=.haml
---type-add=ruby=.js
+--type-add=ruby=.feature
 
+--ignore-dir=cache
+# --ignore-dir=public/javascripts/cache
