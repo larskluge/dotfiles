@@ -1,62 +1,29 @@
 function! JSLintV8(hide_empty)
-				set lazyredraw
-				" Close any existing cwindows.
-				cclose
-				let l:grepformat_save = &grepformat
-				let l:grepprogram_save = &grepprg
-				set grepformat&vim
-				set grepformat&vim
-				let &grepformat = '%f(%l):%m'
-				let &grepprg = "$HOME/.vim/bin/jslint.rb"
+  set lazyredraw
+  " Close any existing cwindows.
+  cclose
+  let l:grepformat_save = &grepformat
+  let l:grepprogram_save = &grepprg
+  set grepformat&vim
+  let &grepformat = '%f(%l):%m'
+  let &grepprg = "$HOME/.vim/bin/jslint.rb"
 
-				if &readonly == 0 | update | endif
-				silent! grep! %
-				let &grepformat = l:grepformat_save
-				let &grepprg = l:grepprogram_save
-				let l:mod_total = 0
-				let l:win_count = 1
+  if &readonly == 0 | update | endif
+  silent! grep! %
+  let &grepformat = l:grepformat_save
+  let &grepprg = l:grepprogram_save
+  let l:mod_total = 0
+  let l:win_count = 1
 
-
-        if (len(getqflist()) > 0 || !a:hide_empty)
-          " Determine correct window height
-          execute 'belowright copen'
-          nnoremap <buffer> <silent> c :cclose<CR>
-          set nolazyredraw
-          redraw!
-        end
-
+  if (len(getqflist()) > 0 || !a:hide_empty)
+    " Determine correct window height
+    execute 'belowright copen'
+    nnoremap <buffer> <silent> c :cclose<CR>
+    set nolazyredraw
+    redraw!
+  end
 endfunction
 
-function! JSLintQuick(hide_empty)
-				set lazyredraw
-				" Close any existing cwindows.
-				cclose
-				let l:grepformat_save = &grepformat
-				let l:grepprogram_save = &grepprg
-				set grepformat&vim
-				set grepformat&vim
-				let &grepformat = '%f(%l):%m'
-				let &grepprg = "jsl -nologo -nofilelisting -nosummary -nocontext -process"
-
-				if &readonly == 0 | update | endif
-				silent! grep! %
-				let &grepformat = l:grepformat_save
-				let &grepprg = l:grepprogram_save
-				let l:mod_total = 0
-				let l:win_count = 1
-
-
-        if (len(getqflist()) > 0 || !a:hide_empty)
-          " Determine correct window height
-          execute 'belowright copen'
-          nnoremap <buffer> <silent> c :cclose<CR>
-          set nolazyredraw
-          redraw!
-        end
-
-endfunction
-
-command! -nargs=0 -complete=command JSLintQuick call JSLintQuick(0)
 
 if ( !hasmapto('JSLintV8k(0)') && (maparg('<F3>') == '') )
   map <F3> :call JSLintV8(0)<CR>
