@@ -83,3 +83,9 @@ autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :call TrimWhiteS
 let g:EasyGrepMode = 2
 let g:EasyGrepRecursive = 1
 
+
+" Markdown
+augroup mkd
+  autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
+augroup END
+
