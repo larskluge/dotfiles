@@ -5467,7 +5467,7 @@ if (typeof read == "function") {
     undef: true,
     forin: true,
     white: false,
-    predef: ["Ext", "si", "jQuery", "$", "Router", "t", "_", "translation", "window", "SI", "Juggernaut", "kia"]
+    predef: ["Ext", "si", "jQuery", "$", "Router", "t", "_", "translation", "window", "SI", "Juggernaut", "kia", "SC"]
   };
 
     var j, e, i, input, num_errors = 0;
