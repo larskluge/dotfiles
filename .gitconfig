@@ -1,0 +1,21 @@
+[user]
+	name = aekym
+  email = me@aekym.com
+[color]
+	ui = always
+[alias]
+	ci = commit
+	co = checkout
+	st = status
+	cp = cherry-pick
+[core]
+	editor=vim
+[pack]
+	threads = 0
+[apply]
+	whitespace = nowarn
+[push]
+	default = tracking
+[github]
+	user = aekym
+
