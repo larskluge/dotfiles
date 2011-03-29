@@ -1,13 +1,12 @@
 [user]
 	name = aekym
   email = me@aekym.com
-[color]
-	ui = always
 [alias]
 	ci = commit
 	co = checkout
 	st = status
 	cp = cherry-pick
+	wtf = !git-wtf
 [core]
 	editor=vim
 [pack]
@@ -18,4 +17,7 @@
 	default = tracking
 [github]
 	user = aekym
-
+[branch]
+	autosetuprebase = always
+[color]
+	ui = always
