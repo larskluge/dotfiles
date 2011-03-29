@@ -2,6 +2,7 @@
 --type-add=ruby=.feature
 --type-add=ruby=.builder
 --type-add=js=.json
+--type-add=html=.phtml
 
 --ignore-dir=cache
 # --ignore-dir=public/javascripts/cache
