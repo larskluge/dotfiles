@@ -91,3 +91,8 @@ augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
 augroup END
 
+if has("gui_running")
+  set guifont=Monaco:h12
+  set guioptions=egmrt
+endif
+
