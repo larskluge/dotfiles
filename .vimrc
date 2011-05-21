@@ -21,11 +21,20 @@ set incsearch
 " set hlsearch
 
 
-" colors
+" colors, fonts
 syntax on
 au BufNewFile,BufRead *.j setf objj
 colorscheme blackboard
-highlight Pmenu ctermbg=5 guibg=#004e9c
+" highlight Pmenu ctermbg=5 guibg=#004e9c
+
+if has("gui_running")
+  set guifont=Monaco:h12
+  set guioptions=egmrt
+  " set background=dark
+  set background=light
+  colorscheme solarized
+endif
+
 
 
 " load matchit (% to bounce from do to end, etc.)
@@ -91,8 +100,4 @@ augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
 augroup END
 
-if has("gui_running")
-  set guifont=Monaco:h12
-  set guioptions=egmrt
-endif
 
