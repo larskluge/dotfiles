@@ -101,3 +101,7 @@ augroup mkd
 augroup END
 
 
+" MacVim now supports swipe!
+nmap <SwipeLeft> :bN<CR>
+nmap <SwipeRight> :bn<CR>
+
