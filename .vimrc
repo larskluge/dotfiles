@@ -105,3 +105,7 @@ augroup END
 nmap <SwipeLeft> :bN<CR>
 nmap <SwipeRight> :bn<CR>
 
+
+" Autoopen NERDTree on vim start
+autocmd GUIEnter * NERDTree
+
