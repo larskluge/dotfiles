@@ -17,10 +17,47 @@ export ZSH_THEME="kennethreitz"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rvm root)
+plugins=(git osx brew cap gem ssh-agent rvm)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/viper/bin:/Users/viper/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/mysql:/usr/local/pear/bin:/var/lib/gems/1.8/bin:/Users/viper/bin:/usr/local/mysql/bin
+#
+export PATH=/usr/local/bin:/usr/local/Cellar/ruby/1.9.2-p180/bin:/usr/local/Cellar/ruby/1.9.2-p180/lib/ruby/gems/1.9.1/bin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/local/bin:/opt/local/sbin:/Users/viper/bin:/usr/X11/bin:/usr/local/pear/bin:/usr/local/mysql/bin
+
+# lang
+#
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# rvm
+#
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+
+# node.js
+#
+export NODE_PATH="/usr/local/lib/node"
+
+
+# arch
+export ARCHFLAGS="-arch x86_64"
+
+
+# git
+#
+unalias gst # to use my gst bin instead :)
+alias gf='git fetch'
+alias grco='git rebase origin/$(current_branch)'
+
+
+# some more aliases
+#
+alias root='sudo zsh'
+alias r='rails'
+
+
+# for bundle open (at least)
+#
+export EDITOR=mvim
 
