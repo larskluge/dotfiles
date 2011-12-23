@@ -1,8 +1,10 @@
 --type-add=ruby=.haml
+--type-add=ruby=.erb
 --type-add=ruby=.feature
 --type-add=ruby=.builder
 --type-add=js=.json
---type-add=html=.phtml
+--type-add=js=.coffee
+--type-add=css=.sass
 
 --ignore-dir=cache
 # --ignore-dir=public/javascripts/cache
