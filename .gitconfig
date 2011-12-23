@@ -7,6 +7,7 @@
 	st = status
 	cp = cherry-pick
 	wtf = !git-wtf
+	stash-list = "!git stash list | while read line; do   ref=${line%%:*};   prefix=$(test $(git diff $ref | wc -l) = \"0\" && echo \"✔  \" || echo \"   \");   echo \"$prefix$line\"; done"
 [core]
 	editor=vim
 [pack]
