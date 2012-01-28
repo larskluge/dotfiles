@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #
-export PATH=/usr/local/bin:/usr/local/Cellar/ruby/1.9.2-p180/bin:/usr/local/Cellar/ruby/1.9.2-p180/lib/ruby/gems/1.9.1/bin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/local/bin:/opt/local/sbin:/Users/viper/bin:/usr/X11/bin:/usr/local/pear/bin:/usr/local/mysql/bin
+export PATH=/usr/local/bin:/usr/local/Cellar/ruby/1.9.2-p180/bin:/usr/local/Cellar/ruby/1.9.2-p180/lib/ruby/gems/1.9.1/bin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/local/bin:/opt/local/sbin:/Users/viper/bin:/usr/X11/bin:/usr/local/pear/bin:/usr/local/mysql/bin:/usr/local/sbin
 
 # lang
 #
@@ -37,7 +37,7 @@ export LC_ALL=en_US.UTF-8
 
 # node.js
 #
-export NODE_PATH="/usr/local/lib/node"
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 
 
 # arch
