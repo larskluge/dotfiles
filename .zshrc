@@ -47,6 +47,7 @@ export ARCHFLAGS="-arch x86_64"
 # git
 #
 unalias gst # to use my gst bin instead :)
+alias g='nocorrect git'
 alias gf='git fetch'
 alias grco='git rebase origin/$(current_branch)'
 
