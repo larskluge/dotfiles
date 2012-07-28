@@ -11,6 +11,7 @@ export ZSH_THEME="kennethreitz"
 
 # Comment this out to disable weekly auto-update checks
 # export DISABLE_AUTO_UPDATE="true"
+export DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
