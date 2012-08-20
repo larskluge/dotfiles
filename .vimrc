@@ -30,8 +30,8 @@ colorscheme blackboard
 if has("gui_running")
   set guifont=Monaco:h12
   set guioptions=egmrt
-  " set background=dark
-  set background=light
+  set background=dark
+  " set background=light
   colorscheme solarized
 
   function! ToggleBackground()
