@@ -25,9 +25,10 @@ Bundle 'vim-coffee-script'
 
 " Settings
 "
+set nocompatible
+
 set history=1000
 set nobackup
-set nocompatible
 set nowritebackup
 set number
 set ruler
