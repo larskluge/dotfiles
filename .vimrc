@@ -21,6 +21,31 @@ set incsearch
 " set hlsearch
 
 
+" VUNDLE
+"
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" Bundles
+Bundle 'ack.vim'
+Bundle 'renamer.vim'
+Bundle 'surround.vim'
+Bundle 'ctrlp.vim'
+Bundle 'Gundo'
+Bundle 'mattn/gist-vim'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neosnippet'
+Bundle 'The-NERD-tree'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-coffee-script'
+
+
 " colors, fonts
 syntax on
 au BufNewFile,BufRead *.j setf objj
