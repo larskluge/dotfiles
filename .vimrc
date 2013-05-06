@@ -118,6 +118,7 @@ if has("gui_running")
 
   " Autoopen NERDTree on vim start
   autocmd GUIEnter * NERDTree
+  autocmd VimEnter * wincmd p
 
   " MacVim now supports swipe!
   nmap <SwipeLeft> :bN<CR>
