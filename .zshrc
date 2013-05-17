@@ -64,3 +64,10 @@ alias r='rails'
 #
 export EDITOR=mvim
 
+# boost ruby performance
+#
+export RUBY_GC_MALLOC_LIMIT=59000000
+export RUBY_HEAP_MIN_SLOTS=600000
+export RUBY_FREE_MIN=100000
+
+
