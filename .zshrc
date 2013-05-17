@@ -58,11 +58,13 @@ alias grb='nocorrect grb'
 #
 alias root='sudo zsh'
 alias r='rails'
+alias z='zeus'
 
 
 # for bundle open (at least)
 #
 export EDITOR=mvim
+
 
 # boost ruby performance
 #
