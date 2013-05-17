@@ -85,6 +85,7 @@ map <leader>a :Ack<Space>
 :map <C-Tab> :tabnext<CR>
 :map <C-S-Tab> :tabprevious<CR>
 
+:map <leader>b :CtrlPBuffer<CR>
 
 " Removes trailing spaces
 function TrimWhiteSpace()
