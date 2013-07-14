@@ -21,7 +21,7 @@ export DISABLE_UPDATE_PROMPT="true"
 plugins=(git osx brew cap gem ssh-agent rvm)
 
 source $ZSH/oh-my-zsh.sh
-# source $ZSH/.zshenv
+source ~/.zshenv
 
 # lang
 #
@@ -68,5 +68,4 @@ export EDITOR=mvim
 export RUBY_GC_MALLOC_LIMIT=59000000
 export RUBY_HEAP_MIN_SLOTS=600000
 export RUBY_FREE_MIN=100000
-
 
