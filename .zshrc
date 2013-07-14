@@ -21,10 +21,7 @@ export DISABLE_UPDATE_PROMPT="true"
 plugins=(git osx brew cap gem ssh-agent rvm)
 
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-#
-export PATH=/usr/local/bin:/usr/local/Cellar/ruby/1.9.2-p180/bin:/usr/local/Cellar/ruby/1.9.2-p180/lib/ruby/gems/1.9.1/bin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/local/bin:/opt/local/sbin:/usr/X11/bin:/usr/local/pear/bin:/usr/local/mysql/bin:~/bin:/usr/local/sbin
+# source $ZSH/.zshenv
 
 # lang
 #
