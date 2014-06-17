@@ -57,6 +57,7 @@ alias grb='nocorrect grb'
 #
 alias root='sudo zsh'
 alias r='rails'
+alias c='pbcopy'
 alias be='bundle exec'
 
 
