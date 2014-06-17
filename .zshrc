@@ -18,19 +18,21 @@ export DISABLE_UPDATE_PROMPT="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew cap gem ssh-agent rvm)
+plugins=(git osx brew cap gem ssh-agent docker chruby)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zshenv
+
 
 # lang
 #
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# rvm
+
+# default ruby
 #
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+chruby ruby-2.1.1
 
 
 # node.js
@@ -55,7 +57,7 @@ alias grb='nocorrect grb'
 #
 alias root='sudo zsh'
 alias r='rails'
-alias z='zeus'
+alias be='bundle exec'
 
 
 # for bundle open (at least)
