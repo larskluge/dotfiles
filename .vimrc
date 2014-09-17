@@ -12,10 +12,12 @@ Bundle 'ack.vim'
 Bundle 'ctrlp.vim'
 Bundle 'Gundo'
 Bundle 'mattn/gist-vim'
+Bundle 'othree/coffee-check.vim'
 Bundle 'renamer.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'surround.vim'
+Bundle 'Tabular'
 Bundle 'tComment'
 Bundle 'The-NERD-tree'
 Bundle 'tpope/vim-abolish'
@@ -40,6 +42,9 @@ set visualbell
 
 " Make file/command completion useful
 set wildmode=list:longest
+
+" General Ignores
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
 " Search+replace
 set ignorecase
