@@ -18,7 +18,7 @@ export DISABLE_UPDATE_PROMPT="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew cap gem ssh-agent docker chruby)
+plugins=(git osx brew cap gem ssh-agent docker chruby node npm)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zshenv
@@ -58,6 +58,7 @@ alias grb='nocorrect grb'
 alias root='sudo zsh'
 alias r='rails'
 alias c='pbcopy'
+alias d='docker'
 alias be='bundle exec'
 
 
