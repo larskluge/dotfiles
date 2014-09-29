@@ -39,6 +39,7 @@ set ruler
 set scrolloff=3
 set tw=150
 set visualbell
+set noswapfile
 
 " Make file/command completion useful
 set wildmode=list:longest
