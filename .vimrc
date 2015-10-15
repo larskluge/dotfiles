@@ -10,12 +10,17 @@ Bundle 'gmarik/vundle'
 " Bundles
 Bundle 'ack.vim'
 Bundle 'ctrlp.vim'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'ekalinin/Dockerfile.vim'
+Bundle 'fatih/vim-go'
 Bundle 'Gundo'
 Bundle 'mattn/gist-vim'
 Bundle 'othree/coffee-check.vim'
 Bundle 'renamer.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+Bundle 'slim-template/vim-slim'
 Bundle 'surround.vim'
 Bundle 'Tabular'
 Bundle 'tComment'
@@ -40,6 +45,7 @@ set scrolloff=3
 set tw=150
 set visualbell
 set noswapfile
+set exrc
 
 " Make file/command completion useful
 set wildmode=list:longest
@@ -133,4 +139,6 @@ if has("gui_running")
   nmap <SwipeLeft> :bN<CR>
   nmap <SwipeRight> :bn<CR>
 endif
+
+set secure
 

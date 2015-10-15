@@ -18,7 +18,7 @@ export DISABLE_UPDATE_PROMPT="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew cap gem ssh-agent docker chruby node npm)
+plugins=(git osx brew gem ssh-agent docker chruby node npm golang)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zshenv
@@ -32,7 +32,7 @@ export LC_ALL=en_US.UTF-8
 
 # default ruby
 #
-chruby ruby-2.1.1
+chruby ruby-2.2.3
 
 
 # node.js
@@ -57,7 +57,6 @@ alias grb='nocorrect grb'
 #
 alias root='sudo zsh'
 alias r='rails'
-alias c='pbcopy'
 alias d='docker'
 alias be='bundle exec'
 
@@ -68,3 +67,16 @@ export EDITOR=mvim
 
 
 
+# boot2docker
+#
+# eval $(boot2docker shellinit)
+eval $(docker-machine env docker-vm)
+
+
+# NVM
+export NVM_DIR="/Users/lars/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# CoreOS
+#
+alias f=fleetctl
