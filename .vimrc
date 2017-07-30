@@ -1,48 +1,59 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+
 " VUNDLE
 "
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 " Bundles
-Bundle 'ack.vim'
-Bundle 'ctrlp.vim'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'ekalinin/Dockerfile.vim'
-Bundle 'fatih/vim-go'
-Bundle 'Gundo'
-Bundle 'mattn/gist-vim'
-Bundle 'othree/coffee-check.vim'
-Bundle 'renamer.vim'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
-Bundle 'slim-template/vim-slim'
-Bundle 'surround.vim'
-Bundle 'Tabular'
-Bundle 'tComment'
-Bundle 'The-NERD-tree'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-coffee-script'
+Plugin 'ack.vim'
+Plugin 'ctrlp.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'fatih/vim-go'
+Plugin 'Gundo'
+Plugin 'mattn/gist-vim'
+Plugin 'othree/coffee-check.vim'
+Plugin 'renamer.vim'
+Plugin 'Shougo/neocomplcache'
+Plugin 'Shougo/neosnippet'
+Plugin 'slim-template/vim-slim'
+Plugin 'surround.vim'
+Plugin 'Tabular'
+Plugin 'tComment'
+Plugin 'The-NERD-tree'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-coffee-script'
+Plugin 'xolox/vim-lua-ftplugin'
+Plugin 'xolox/vim-misc'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 
 " Settings
 "
-set nocompatible
-
 set history=1000
 set nobackup
 set nowritebackup
 set number
 set ruler
 set scrolloff=3
-set tw=150
+set textwidth=0
+set wrapmargin=0
 set visualbell
 set noswapfile
 set exrc
@@ -64,7 +75,6 @@ set bs=2
 set shiftwidth=2
 set smarttab
 set expandtab
-filetype plugin indent on
 
 
 " Colors, fonts
