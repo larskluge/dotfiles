@@ -8,7 +8,7 @@ plugins=(git ssh-agent) # osx brew gem ssh-agent chruby node npm golang rust)
 source $ZSH/oh-my-zsh.sh
 
 export GOPATH=$HOME/projects/go
-export PATH=$HOME/bin:$GOPATH/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:$GOPATH/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/curl/bin:/usr/local/sbin:$PATH
 
 # source ~/.zshenv
 
@@ -37,21 +37,21 @@ alias f=fleetctl
 alias fig=docker-compose
 alias bb=babl-build
 alias ba=babl-admin
+alias ncdu="ncdu --color dark -x --exclude .git --exclude node_modules"
+alias preview="fzf --preview 'bat --color \"always\" {}'"
 
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='vim'
 
 
 # Languages
 
+# Crystal
+export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
+
 # default ruby
 source /usr/local/share/chruby/chruby.sh
-chruby 2.4.1
+chruby 2.5.0
 
 # node.js
 export NODE_PATH=/usr/local/lib/node_modules
@@ -62,3 +62,9 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 # Direnv
 eval "$(direnv hook zsh)"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+
