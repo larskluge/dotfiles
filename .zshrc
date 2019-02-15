@@ -11,7 +11,7 @@ export GOPATH=$HOME/projects/go
 export PATH=$HOME/bin:$GOPATH/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/curl/bin:/usr/local/sbin:$PATH
 
 # source ~/.zshenv
-
+source ~/.profile
 
 # Lang
 export LANG=en_US.UTF-8
@@ -51,7 +51,7 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 # default ruby
 source /usr/local/share/chruby/chruby.sh
-chruby 2.5.0
+chruby 2.6.1
 
 # node.js
 export NODE_PATH=/usr/local/lib/node_modules
@@ -64,7 +64,7 @@ export NODE_PATH=/usr/local/lib/node_modules
 eval "$(direnv hook zsh)"
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 
-# FZF
+# FZF // install with $(brew --prefix)/opt/fzf/install
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
