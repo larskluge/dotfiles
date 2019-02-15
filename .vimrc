@@ -9,11 +9,21 @@ if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
   call dein#add('~/.cache/dein')
 
-  "call dein#add('Shougo/deoplete.nvim')
-  call dein#add('ap/vim-css-color')
-  " call dein#add('benmills/vimux')             " Tmux integration
   call dein#add('bling/vim-airline')
   call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('godlygeek/tabular')
+  call dein#add('JuliaEditorSupport/julia-vim')
+  call dein#add('mileszs/ack.vim')
+  call dein#add('qpkorr/vim-renamer')
+  call dein#add('rhysd/vim-crystal')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('slim-template/vim-slim')
+  call dein#add('tomtom/tcomment_vim')
+  call dein#add('tpope/vim-fugitive')         " Git integration
+  call dein#add('tpope/vim-surround')
+  call dein#add('vim-ruby/vim-ruby')
+
+  " call dein#add('benmills/vimux')             " Tmux integration
   " call dein#add('derekwyatt/vim-scala')
   " call dein#add('digitaltoad/vim-jade')
   " call dein#add('ekalinin/Dockerfile.vim')
@@ -26,23 +36,15 @@ if dein#load_state('~/.cache/dein')
   " call dein#add('mattn/webapi-vim')
   " call dein#add('othree/coffee-check.vim')
   " call dein#add('rking/ag.vim')
-  call dein#add('scrooloose/nerdtree')
   " call dein#add('scrooloose/syntastic')
-  " call dein#add('slim-template/vim-slim')
-  call dein#add('tomtom/tcomment_vim')
+  " call dein#add('Shougo/deoplete.nvim')
   " call dein#add('tpope/vim-abolish')
   " call dein#add('tpope/vim-dispatch')
   " call dein#add('tpope/vim-endwise')
-  call dein#add('tpope/vim-fugitive')         " Git integration
   " call dein#add('tpope/vim-markdown')
   " call dein#add('tpope/vim-rails')
   " call dein#add('tpope/vim-sensible')         " General settings
-  call dein#add('tpope/vim-surround')
-  call dein#add('vim-ruby/vim-ruby')
   " call dein#add('vim-scripts/Gundo')
-  call dein#add('godlygeek/tabular')
-  call dein#add('mileszs/ack.vim')
-  " call dein#add('vim-scripts/renamer.vim')
   " call dein#add('xolox/vim-lua-ftplugin')
   " call dein#add('xolox/vim-misc')
 
@@ -111,11 +113,30 @@ set expandtab
 " Jump to the last know position in a file after opening it
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 " Clear the search buffer when hitting return
-:nnoremap <CR> :nohlsearch<cr>
+" :nnoremap <CR> :nohlsearch<cr>
 
 " Colors, fonts
-" colorscheme blackboard
 " highlight Pmenu ctermbg=5 guibg=#004e9c
+" colorscheme solarized
+" colorscheme blackboard
+" set background=dark
+" set background=light
+" let g:airline_theme = 'solarized'
+" set termguicolors
+
+" function! ToggleBackground()
+"   if (g:solarized_style=="dark")
+"     let g:solarized_style="light"
+"     colorscheme solarized
+"   else
+"     let g:solarized_style="dark"
+"     colorscheme solarized
+"   endif
+" endfunction
+" command! Togbg call ToggleBackground()
+" nnoremap <F5> :call ToggleBackground()<CR>
+" inoremap <F5> <ESC>:call ToggleBackground()<CR>a
+" vnoremap <F5> <ESC>:call ToggleBackground()<CR>
 
 
 " Load matchit (% to bounce from do to end, etc.)
@@ -190,23 +211,6 @@ autocmd FileWritePre,FileAppendPre,FilterWritePre,BufWritePre * :call TrimWhiteS
 " if has("gui_running")
 "   set guifont=Monaco:h12
 "   set guioptions=egmrt
-"   set background=dark
-"   " set background=light
-"   colorscheme solarized
-"
-"   function! ToggleBackground()
-"     if (g:solarized_style=="dark")
-"       let g:solarized_style="light"
-"       colorscheme solarized
-"     else
-"       let g:solarized_style="dark"
-"       colorscheme solarized
-"     endif
-"   endfunction
-"   command! Togbg call ToggleBackground()
-"   nnoremap <F5> :call ToggleBackground()<CR>
-"   inoremap <F5> <ESC>:call ToggleBackground()<CR>a
-"   vnoremap <F5> <ESC>:call ToggleBackground()<CR>
 "
 "   " MacVim now supports swipe!
 "   nmap <SwipeLeft> :bN<CR>
