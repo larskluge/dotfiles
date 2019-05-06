@@ -11,6 +11,7 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('bling/vim-airline')
   call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('frankier/neovim-colors-solarized-truecolor-only')
   call dein#add('godlygeek/tabular')
   call dein#add('JuliaEditorSupport/julia-vim')
   call dein#add('mileszs/ack.vim')
@@ -23,6 +24,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-ruby/vim-ruby')
 
+  " call dein#add('altercation/vim-colors-solarized')   " does not work (yet?) with neovim
   " call dein#add('benmills/vimux')             " Tmux integration
   " call dein#add('derekwyatt/vim-scala')
   " call dein#add('digitaltoad/vim-jade')
@@ -117,26 +119,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " Colors, fonts
 " highlight Pmenu ctermbg=5 guibg=#004e9c
-" colorscheme solarized
-" colorscheme blackboard
-" set background=dark
-" set background=light
 " let g:airline_theme = 'solarized'
-" set termguicolors
 
-" function! ToggleBackground()
-"   if (g:solarized_style=="dark")
-"     let g:solarized_style="light"
-"     colorscheme solarized
-"   else
-"     let g:solarized_style="dark"
-"     colorscheme solarized
-"   endif
-" endfunction
-" command! Togbg call ToggleBackground()
-" nnoremap <F5> :call ToggleBackground()<CR>
-" inoremap <F5> <ESC>:call ToggleBackground()<CR>a
-" vnoremap <F5> <ESC>:call ToggleBackground()<CR>
 
 
 " Load matchit (% to bounce from do to end, etc.)
