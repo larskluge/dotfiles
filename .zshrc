@@ -30,7 +30,8 @@ alias gf='git fetch'
 alias grco='git rebase origin/$(current_branch)'
 alias grb='nocorrect grb'
 alias root='sudo zsh'
-alias r='rails'
+# alias r='rails'
+alias r='redis-cli'
 alias d='docker'
 alias be='bundle exec'
 alias f=fleetctl
@@ -39,6 +40,7 @@ alias bb=babl-build
 alias ba=babl-admin
 alias ncdu="ncdu --color dark -x --exclude .git --exclude node_modules"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias k=kubectl
 
 
 export EDITOR='vim'
@@ -51,7 +53,7 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 # default ruby
 source /usr/local/share/chruby/chruby.sh
-chruby 2.6.1
+chruby 2.6.3
 
 # node.js
 export NODE_PATH=/usr/local/lib/node_modules
@@ -68,3 +70,6 @@ export PATH="/usr/local/opt/node@8/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/mc mc
