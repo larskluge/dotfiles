@@ -7,7 +7,9 @@ if (has("termguicolors"))
 endif
 
 set background=dark " light
-colorscheme solarized
+" available color schemes: solarized, gruvbox
+colorscheme flattened_dark
+highlight Search guifg=#268bd2 guibg=#000000
 
 
 " function! ToggleBackground()

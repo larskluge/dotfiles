@@ -12,12 +12,12 @@ if dein#load_state('~/.cache/dein')
   call dein#add('bling/vim-airline')
   call dein#add('ctrlpvim/ctrlp.vim')
   call dein#add('elixir-lang/vim-elixir')
-  call dein#add('frankier/neovim-colors-solarized-truecolor-only')
   call dein#add('godlygeek/tabular')
   call dein#add('JuliaEditorSupport/julia-vim')
   call dein#add('mileszs/ack.vim')
   call dein#add('qpkorr/vim-renamer')
   call dein#add('rhysd/vim-crystal')
+  call dein#add('romainl/flattened')
   call dein#add('scrooloose/nerdtree')
   call dein#add('slim-template/vim-slim')
   call dein#add('tomtom/tcomment_vim')
@@ -25,6 +25,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-ruby/vim-ruby')
 
+  " call dein#add('ap/vim-css-color')  " Highlight CSS Colors
+  " call dein#add('morhetz/gruvbox') " Color scheme
   " call dein#add('altercation/vim-colors-solarized')   " does not work (yet?) with neovim
   " call dein#add('benmills/vimux')             " Tmux integration
   " call dein#add('derekwyatt/vim-scala')
