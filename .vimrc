@@ -13,7 +13,9 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ctrlpvim/ctrlp.vim')
   call dein#add('elixir-lang/vim-elixir')
   call dein#add('godlygeek/tabular')
+  call dein#add('jbmorgado/vim-pine-script')
   call dein#add('JuliaEditorSupport/julia-vim')
+  call dein#add('mhinz/vim-mix-format')
   call dein#add('mileszs/ack.vim')
   call dein#add('qpkorr/vim-renamer')
   call dein#add('rhysd/vim-crystal')
@@ -21,9 +23,10 @@ if dein#load_state('~/.cache/dein')
   call dein#add('scrooloose/nerdtree')
   call dein#add('slim-template/vim-slim')
   call dein#add('tomtom/tcomment_vim')
-  call dein#add('tpope/vim-fugitive')         " Git integration
+  " call dein#add('tpope/vim-fugitive')         " Git integration
   call dein#add('tpope/vim-surround')
   call dein#add('vim-ruby/vim-ruby')
+  call dein#add('will133/vim-dirdiff')
 
   " call dein#add('ap/vim-css-color')  " Highlight CSS Colors
   " call dein#add('morhetz/gruvbox') " Color scheme
@@ -89,6 +92,7 @@ set visualbell
 set noswapfile
 set exrc
 set nowrap
+set colorcolumn=100
 
 " Make file/command completion useful
 set wildmode=list:longest
@@ -169,6 +173,9 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+" Elixir
+let g:mix_format_on_save = 1
 
 
 " BINDINGS

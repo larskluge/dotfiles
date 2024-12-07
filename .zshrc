@@ -40,20 +40,21 @@ alias bb=babl-build
 alias ba=babl-admin
 alias ncdu="ncdu --color dark -x --exclude .git --exclude node_modules"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias k=kubectl
+alias k='kubectl --context "$KUBECTL_CONTEXT"'
 
 
 export EDITOR='vim'
 
 
-# Languages
+# Erlang
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Crystal
 export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 # default ruby
 source /usr/local/share/chruby/chruby.sh
-chruby 2.6.3
+chruby 2.6.4
 
 # node.js
 export NODE_PATH=/usr/local/lib/node_modules
@@ -73,3 +74,4 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/mc mc
+if [ -e /Users/l/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/l/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
