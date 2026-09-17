@@ -2,3 +2,6 @@
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 .elixir_ls
+
+# Beads workspace flock gate (local runtime state)
+.beads.gate.lock
